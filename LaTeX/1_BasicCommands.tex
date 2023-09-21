@@ -1,0 +1,92 @@
+\documentclass{report} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+  backgroundcolor=\color{gray!10}, % Color de fondo
+  frame=single, % Marco alrededor del código
+  rulecolor=\color{black}, % Color del marco
+  basicstyle=\ttfamily, % Estilo de fuente
+  keywordstyle=\color{blue}, % Color para palabras clave
+  numbers=left, % Números de línea a la izquierda
+  numberstyle=\tiny, % Estilo de los números de línea
+  breaklines=true, % Saltar líneas largas
+  language=TeX % Lenguaje (LaTeX en este caso)
+}
+
+\title{LaTeX Basic commands}
+\author{José Agustín}
+\date{\today}
+
+\begin{document}
+
+\maketitle 
+
+\tableofcontents 
+
+\chapter{Introduction}
+This document is about the LaTeX basic commands and how to use them in my particular case.
+This is not a guide of how to use \LaTeX.
+\\
+\textbf{What will be my particular case?}
+\\
+Well, I want to use LaTeX to write some mathematical equations(which is one of its principal purposes),
+Music anotations,to have a really good platform to do a litte changes quikly and with the conbination of vim
+make my owm shortcuts,for example to create tables, lists and equations.
+
+\chapter{Most used commands}
+Here I will obviously put all the commands that I consider more important.
+\enumerate
+\item Basic document structure
+\item Tables
+\item Lists
+\item Mathematicals equations
+\item Section and subsections
+\item Custom scripts to generate elements quikly
+
+\section{Basic document structure}
+
+\begin{lstlisting}
+\documentclass{article}
+\begin{document}
+
+\end{document}
+\end{lstlisting}
+
+\textbf{documentclass} determines the document type and define its general format.
+\\
+Here are the list of the different types of formats available
+
+\itemize
+\item article: For creation of shorts documents and articles, like: informs,technical documents
+	this format include: unique page with sections, subsections and summary.
+\item report: For creation of long documents like: tesis, long informs and extended academic works,
+	it give aditionally features like: numeric chapters.
+\item book: For creation of books and manuscripts. Give a structure for chapters, sections,
+	hierarchy subsections and allow the inclusion of preface and table of contents.
+\item letter: For creations of letters, give specific formats for headers, adresses and signature
+\item beamer: For creations of slide presentations
+\\
+\textbf{begin and end}
+
+
+\section{Tables}
+\section{Lists}
+\section{Mathematicals equations}
+\section{Section and subsections}
+\section{Custom scripts to generate elements quikly}
+%\begin{lstlisting}
+%\begin{verbatim}
+%\enumerate
+%\item Primer elemento
+%\item Segundo elemento
+%\end{verbatim}    
+%\end{lstlisting}
+
+\chapter{How to organize the information}
+Here I will add how to effciently organize the information.
+
+\end{document}
+  
