@@ -1,7 +1,7 @@
 \documentclass{report} 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-
+\usepackage{gensymb}
 \title{How to control a stteper motor}
 \author{José Agustín}
 \date{\today}
@@ -27,7 +27,32 @@ This Documents it's somewhat like a guide on how to create a driver(PCB), coveri
 \item Simulation with Ngspice
 \end{itemize}
 All of this topics will be illustrated with a real-world example.\\
-\textbf{Mote:} this is the first version of this document, so there may be 
+\textbf{Note:} this is the first version of this document, so there may be 
 some errors for which i am not responsible
+
+\chapter{Effects involved in stepper motor}
+\section{What Is a Stepper Motor?}
+A stepper motor is an electrical motor, and like any electric motor they have coils, the main 
+difference with others motors it's his construction, with his construction it have some interesting
+capabilities, like rotate in discrete \textbf{steps}, rotating in fixed angles such 0.8\degree or 
+1.9\degree, althought the exact step size depends in themanufacture.\\
+To move(rotate) a stepper motor, a special driver is necessary that provides the correct current, voltage and
+the order to energize the coils.
+
+\section{What are the physical and electrical pfenomemals involved?}
+\subsection{Torque and load effects}
+\subsection{Resonance phenomena}
+\subsection{Step accuracy and resolution}
+\subsection{Heat gereration and cooling}
+\subsection{Electromagnetic interference (EMI)}
+\subsection{Electromagnetic coil behavior}
+\subsection{Inductance and impedance}
+\subsection{Back EMF(Electromotive Force)}
+\chapter{Stepper motor characteristics}
+\section{How its the construction of a common Stepper Motor?}
+\chapter{Notes}
+In this chapter I will keep adding notes based in some references to compare and support the information 
+showed here.
+\section{AN907|Microchip Technology Inc}
 
 \end{document}
