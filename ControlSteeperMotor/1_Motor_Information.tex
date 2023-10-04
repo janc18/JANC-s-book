@@ -2,14 +2,31 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{gensymb}
+\usepackage{tcolorbox}
+
+\newenvironment{deductionR}{
+  \begin{tcolorbox}[colback=orange!10, colframe=orange!40!black, title=Deduction result]
+}{
+  \end{tcolorbox}
+}
+
+\newenvironment{doubt}{
+  \begin{tcolorbox}[colback=blue!10, colframe=blue!40!black, title=Doubt]
+}{
+  \end{tcolorbox}
+}
+
+\newenvironment{deduction}{
+  \begin{tcolorbox}[colback=green!10, colframe=green!40!black, title=Deduction]
+}{
+  \end{tcolorbox}
+}
+
 \title{How to control a stteper motor}
 \author{José Agustín}
 \date{\today}
-
 \begin{document}
-
 \maketitle 
-
 \tableofcontents 
 
 \chapter{Introduction}
@@ -38,9 +55,9 @@ capabilities, like rotate in discrete \textbf{steps}, rotating in fixed angles s
 1.9\degree, althought the exact step size depends in themanufacture.\\
 To move(rotate) a stepper motor, a special driver is necessary that provides the correct current, voltage and
 the order to energize the coils.
-
 \section{What are the physical and electrical pfenomemals involved?}
 \subsection{Torque and load effects}
+\subsection{Magnetic flux path}
 \subsection{Resonance phenomena}
 \subsection{Step accuracy and resolution}
 \subsection{Heat gereration and cooling}
@@ -48,11 +65,39 @@ the order to energize the coils.
 \subsection{Electromagnetic coil behavior}
 \subsection{Inductance and impedance}
 \subsection{Back EMF(Electromotive Force)}
+
 \chapter{Stepper motor characteristics}
 \section{How its the construction of a common Stepper Motor?}
+
 \chapter{Notes}
 In this chapter I will keep adding notes based in some references to compare and support the information 
 showed here.
 \section{AN907|Microchip Technology Inc}
+
+\subsection*{A stepper motor is load independent as long as the load does not exceed the torque rating}
+\hrule
+\vspace{4pt}
+That is correct because when you apply a small force with your fingertips to the shaft of
+a stepper motor, you can't notice the a decrease in force or velocity.\\
+But if you attempt to do the same with a typical brush motor you can find out that it will
+start to decrease its velocity and force, of course, if doesn't have a feedback circuit.
+
+ 
+\subsection*{Types of Stepper motors}
+\begin{itemize}
+	\item Permanent magnet: Have a magnetized rotor
+	\item Variable reluctance: Have soft-iron rotor
+	\item Hybrid: Combine aspect of both
+\end{itemize}
+
+\begin{doubt}
+	\textbf{What is a Soft-iron rotor?}\\
+	Its material composition is soft-iron, which provides certain capabilities that are different
+	from those of a permanent magnet. These capabilities will be discussed in another note.
+\end{doubt}
+
+\subsection*{Variable Reluctance Motor}
+They hace three to five windings connected to a common terminal
+
 
 \end{document}
