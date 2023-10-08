@@ -150,6 +150,53 @@ Share the principles of both permanent and variable reluctance motor steeping mo
 
 The rotor for a hybrid stepping motor is multitoothed, like the variable reluctance motor, and contains and axially
 magnetized concetric magnet around its shaft.
+
+\section*{Variable Reluctance Motor vs Permanent magnet or hybrid}
+
+\subsection*{Variable Reluctance Drawbacks}
+\begin{itemize}
+  \item Are generally noisy
+  \item Complex current limiting control is required to achieve high speeds.
+  \item Microstepping is not generally applicable 
+\end{itemize}
+
+\subsection*{Variable Reluctance advantages}
+\begin{itemize}
+  \item The drop in torque with speed is less pronounced
+  \item Simple design
+  \item More robust than permanent magnet motors
+\end{itemize}
+
+\subsection*{Permanent Magnetic and hybrid Drawbacks}
+\begin{itemize}
+  \item Cog when they are turned by hand while not powered 
+\end{itemize}
+
+\subsection*{Permanent Magnetic and hybrid advantages}
+\begin{itemize}
+  \item Are generally preferred where noise or vibration are issues
+  \item Can be microstepped
+\end{itemize}
+
+\section*{Unipolar versus Bipolar}
+Bipolar motor have approximately 30\% more torque than an equivalent Unipolar motor with the same size,
+but require more complex control circuitry than Unipolar motor. 
+
+\section*{Torque}
+Stepper motors have different types of rated torque. These are:
+\begin{itemize}
+  \item \textbf{Holding torque:} The torque required to rotate the
+        motor’s shaft while the windings are energized.
+  \item \textbf{Pull-in torque:} The torque against which a motor
+        can accelerate from a standing start without
+        missing any steps, when driven at a constant
+        stepping rate.
+  \item \textbf{Pull-out torque:} The load a motor can move
+        when at operating speed.
+  \item \textbf{Detent torque:} The torque required to rotate the
+        motor’s shaft while the windings are not
+        energized.
+\end{itemize}
 \end{document}
   \State 
 \EndWhile
