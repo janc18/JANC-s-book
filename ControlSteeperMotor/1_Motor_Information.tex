@@ -197,6 +197,32 @@ Stepper motors have different types of rated torque. These are:
         motor’s shaft while the windings are not
         energized.
 \end{itemize}
+
+\section*{Basic control circuits}
+As with all inductive loads, as voltage is switched on across a winding, the current in the winding begins
+ramping up.
+
+The diode protects the MOSFET from the voltage spike assuming the diode is adequately sized
+
+Some MOSFETs have integral diodes that allow reverse current to flow unimpeded, regardless of the
+gate voltage. If such transistors are used these integral diodes need to have sufficient current carrying capacity
+to carry the full motor current,  All of the diodes must have switching speeds comparable to the speed of the transistors.
+
+\subsection*{Bipolar}
+The basic circuit for driving the windings of a bipolar motor is the H-bridge
+
+Transistors N-channel MOSFETs and therefore require a positive bias on turn-on. Transistors P-channel
+MOSFETs, requiring a negative bias to turn-on. An alternate H-bridge design uses identical MOSFETs for all 4 
+transistors, and uses charge-pump and level shifting circuitry to drive the gates
+
+H-bridges have one inherent danger that should be mentioned. Under no circumstances should the
+transistors on the same side of the bridge be switched on at the same time. This will cause a short which will
+damage the control circuit. Special care should be made to switch all MOSFETs off before turning the next set of MOSFETs on.
+
+The diodes in parallel with each of the MOSFETs protect the MOSFETs from voltage spikes caused by
+switching the inductor. These diodes must be adequately sized in order to prevent damage to the
+MOSFET or diode itself.
+
 \end{document}
   \State 
 \EndWhile
